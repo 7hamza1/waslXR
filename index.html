@@ -3,24 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>VR Model - Wasl</title>
-
-  <!-- Model Viewer Library -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
   <style>
-    body {
-      margin: 0;
-      background: black;
-      overflow: hidden;
-    }
-
-    model-viewer {
-      width: 100vw;
-      height: 100vh;
-    }
+    body { margin: 0; background: black; }
+    model-viewer { width: 100vw; height: 100vh; }
   </style>
 </head>
-
 <body>
   <model-viewer
     src="wasl.glb"
@@ -31,7 +19,8 @@
     exposure="1"
     environment-image="neutral"
     interaction-prompt="auto"
-  >
+    min-camera-orbit="auto auto 1m"
+    max-camera-orbit="auto auto 50m">
   </model-viewer>
 </body>
 </html>
